@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(./liquid-cheese.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 2em;
+}
+
+main {
+  margin: 2em 0;
+
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+/* =================================== */
+.kitchen-range {
+  border: 2px solid orangered;
+  border-radius: 1em;
+}
+
+.holes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hole {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  transition: all 3s;
+}
+
+.switch-container {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.switch {
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  border-radius: 0 60% 60% 60%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.hot {
+  background-color: orangered;
+}
+
+.on {
+  transform: rotate(90deg);
+}
