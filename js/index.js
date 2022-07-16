@@ -6,11 +6,10 @@ const resetBtn = document.querySelector('[data-reset-btn]');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (!rangeInput.value || +rangeInput.value === 0) return;
+  if (!rangeInput.value || +rangeInput.value < 1) return;
 
   const kitchen = new KitchenRange(rangeInput.value);
-  kitchen.render();
-  rangeInput.value = '';
 
+  rangeInput.value = '';
   resetBtn.addEventListener('click', kitchen.resetHandler);
 });

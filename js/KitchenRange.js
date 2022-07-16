@@ -1,11 +1,12 @@
+const mainDOM = document.querySelector('main');
+
 class KitchenRange {
   constructor(holes) {
     this.holes = holes;
+    this.render();
   }
 
   render() {
-    const mainDOM = document.querySelector('main');
-
     const columns = Math.ceil(Math.sqrt(this.holes));
     const width = 120 * columns + 4;
     const html = `<div class="kitchen-range" style="width: ${width}px">
@@ -35,7 +36,7 @@ class KitchenRange {
   }
 
   resetHandler() {
-    document.querySelector('main').innerHTML = '';
+    mainDOM.innerHTML = '';
   }
 }
 
